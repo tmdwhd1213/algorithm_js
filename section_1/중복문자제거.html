@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      /*
+        소문자로 된 한개의 문자열이 입력되면 중복된 문자를 제거하고 출력하는 프로그램을 작성하
+        세요.
+        제거된 문자열의 각 문자는 원래 문자열의 순서를 유지합니다.
+
+      */
+      function solution(str = "") {
+        let answer = "";
+        // 내 풇이
+        // const rmvDup = [...new Set(str)];
+        // answer = rmvDup.join("");
+
+        // indexOf()로 풀기
+        // console.log(str.indexOf("k", 1));
+        for (let i = 0; i < str.length; i++) {
+          // console.log(str[i], i, str.indexOf(str[i]));
+          if (str.indexOf(str[i]) === i) answer += str[i];
+        }
+
+        // indexOf 이용해서 특정 문자 중복되는 개수 구하기
+        let ans = 0;
+        let pos = str.indexOf("k");
+        while (pos !== -1) {
+          ans++;
+          pos = str.indexOf("k", pos + 1);
+        }
+        console.log(ans);
+        return answer;
+      }
+
+      console.log(solution("ksekkset")); // kset
+    </script>
+  </body>
+</html>
