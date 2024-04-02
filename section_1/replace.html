@@ -11,10 +11,14 @@
       */
       function solution(str = "") {
         let answer = "";
-        for (let i = 0; i < str.length; i++) {
-          if (str[i] === "A") answer += "#";
-          else answer += str[i];
-        }
+        // 내 방법
+        // for (let i = 0; i < str.length; i++) {
+        //   if (str[i] === "A") answer += "#";
+        //   else answer += str[i];
+        // }
+
+        // string.prototype.replace()이용
+        answer = str.replace(/A/g, "#");
 
         return answer;
       }
