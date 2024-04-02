@@ -8,6 +8,7 @@
       function solution(a, b, c) {
         let answer;
         let MAX;
+        let sum = a + b + c;
         // MAX 구하기
         if (a > b) {
           MAX = a;
@@ -17,7 +18,7 @@
         if (MAX < c) MAX = c;
 
         // 삼각형 판별(하나의 변 길이가 나머지 변의 길이의 합보다 크면 안 됨.)
-        if (MAX < a + b + c - MAX) answer = "YES";
+        if (MAX < sum - MAX) answer = "YES";
         else answer = "NO";
 
         return answer;
