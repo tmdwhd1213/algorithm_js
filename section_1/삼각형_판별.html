@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(a, b, c) {
+        let answer;
+        let MAX;
+        // MAX 구하기
+        if (a > b) {
+          MAX = a;
+        } else {
+          MAX = b;
+        }
+        if (MAX < c) MAX = c;
+
+        // 삼각형 판별(하나의 변 길이가 나머지 변의 길이의 합보다 크면 안 됨.)
+        if (MAX < a + b + c - MAX) answer = "YES";
+        else answer = "NO";
+
+        return answer;
+      }
+
+      console.log(solution(6, 7, 11)); // "YES"
+      console.log(solution(13, 33, 17)); // "NO"
+    </script>
+  </body>
+</html>
