@@ -29,7 +29,7 @@ CustomArr.prototype.map = function (callbackfn, thisArg) {
 //filter<S extends T>(predicate: (value: T, index: number, array: T[]) => value is S, thisArg?: any): S[];
 /**
  *
- * @param { (value: string | number, index: number, array: []) => [] } predicate
+ * @param { (value: string | number, index: number, array: []) => Boolean } predicate
  * @param {*} thisArg
  */
 CustomArr.prototype.filter = function (predicate, thisArg) {

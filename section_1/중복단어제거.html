@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      /*
+        N개의 문자열이 입력되면 중복된 문자열은 제거하고 출력하는 프로그램을 작성하세요.
+        출력하는 문자열은 원래의 입력순서를 유지합니다. 
+      */
+      function solution(n = 0, ...rest) {
+        let answer = [];
+        // 이거면 끝남.
+        // answer = [...new Set(rest)];
+
+        // includes 메서드로 구하는 법.
+        // for (let x of rest) {
+        //   if (!answer.includes(x)) answer.push(x);
+        // }
+
+        return answer;
+      }
+
+      console.log(solution(5, "good", "time", "good", "time", "student")); // good time student
+    </script>
+  </body>
+</html>
