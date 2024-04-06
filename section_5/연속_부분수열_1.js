@@ -7,7 +7,6 @@ function solution(n = 0, m = 0, arr = []) {
   let sum = 0;
 
   while (right < n) {
-    // console.log("몇 번 도는지"); // 12번
     if (sum < m) {
       sum += arr[right++];
     } else if (sum > m) {
