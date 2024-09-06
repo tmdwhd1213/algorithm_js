@@ -27,3 +27,22 @@ function bubbleSortWithMethod(array = []) {
 
 let arr = [5, 3, 8, 4, 2];
 console.log(bubbleSortWithMethod(arr)); // [2, 3, 4, 5, 8]
+
+// 뒤에 쌓임. 앞에서부터 실행. 쌓인건 굳이 다시 실행할 필요 없음. 이미 정렬된 것이기 때문.
+
+function test(arr = []) {
+  const len = arr.length;
+  for (let i = 0; i < len; i++) {
+    for (let j = 1; j < len - i; j++) {
+      if (arr[j - 1] < arr[j]) {
+        // 뒤가 더 크면 swap!
+        let temp = arr[j - 1];
+        [arr[j - 1], arr[j]] = [arr[j], temp];
+      }
+    }
+  }
+
+  return arr;
+}
+
+console.log(test(arr));
